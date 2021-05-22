@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color"
+    tools:context=".Level">
+
+    <ImageView
+        android:id="@+id/backarrow"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:src="@drawable/back_arrow"
+        />
+
+    <TextView
+        android:id="@+id/levelText"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Now, \nchoose your level."
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="50dp"/>
+
+    <Button
+        android:id="@+id/btnEasy"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/bg_2"
+        android:text="EASY"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:cornerRadius="20dp" />
+
+    <Button
+        android:id="@+id/btnMedium"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/bg_2"
+        android:text="MEDIUM"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:cornerRadius="20dp" />
+
+    <Button
+        android:id="@+id/btnHard"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/bg_2"
+        android:text="HARD"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:cornerRadius="20dp" />
+
+
+</LinearLayout>

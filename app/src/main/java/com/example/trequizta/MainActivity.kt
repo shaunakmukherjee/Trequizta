@@ -19,13 +19,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //since SystemUIVisibility has deprecated
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R)
             window.setDecorFitsSystemWindows(false)
-        }
+
 
         binding.btnPlay.setOnClickListener {
-            startActivity(Intent(this, SplashActivity::class.java))
-
+            startActivity(Intent(this, Level::class.java))
         }
     }
 }

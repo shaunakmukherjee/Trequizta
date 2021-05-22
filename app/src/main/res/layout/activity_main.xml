@@ -12,14 +12,15 @@
         android:id="@+id/appImage"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="-200dp"
         android:layout_marginBottom="20dp"
+    android:contentDescription="Main App Image"
         android:padding="10dp"
-        android:src="@mipmap/ic_launcher_round"
-        />
+        android:src="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/text_subtitle"
+        android:layout_below="@id/appImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Test your knowledge of the beautiful game"
@@ -27,7 +28,7 @@
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="50dp"
         />
 
    <androidx.cardview.widget.CardView
@@ -43,12 +44,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Let's get your name first."
-                />
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -57,7 +52,7 @@
                     <androidx.appcompat.widget.AppCompatEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Type your name here.."
+                        android:hint="Let's get your name first!"
                         app:cornerRadius="20dp"
                         android:textColor="#363A43"
                     />

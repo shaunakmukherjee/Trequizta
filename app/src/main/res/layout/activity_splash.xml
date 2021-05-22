@@ -10,7 +10,7 @@
         android:id="@+id/MainImage"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:padding="5dp"
         android:src="@mipmap/ic_launcher_round"
@@ -25,7 +25,7 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@color/white"
-        android:layout_below="@id/appImage"
+        android:layout_below="@id/MainImage"
         android:padding="50dp"/>
 
     <ProgressBar
