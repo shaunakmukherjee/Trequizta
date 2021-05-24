@@ -3,6 +3,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.trequizta.databinding.ActivityMainBinding
 
 
@@ -24,7 +25,16 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btnPlay.setOnClickListener {
-            startActivity(Intent(this, Level::class.java))
+
+            //putting validation checks before starting the game
+            if (binding.playerName.text.toString().isEmpty()) {
+                Toast.makeText(this, "Can't play anonymously :)", Toast.LENGTH_SHORT)
+            }
+            else {
+                val intent = Intent(this, Level::class.java)
+                intent.putExtra(UserVariables.USER_NAME, binding.playerName.text.toString())
+                startActivity(intent)
+            }
         }
     }
 }

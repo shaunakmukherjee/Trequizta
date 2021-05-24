@@ -50,6 +50,7 @@
                     android:layout_marginTop="20dp"
                     style='@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox'>
                     <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/playerName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Let's get your name first!"

@@ -15,6 +15,9 @@ class Level : AppCompatActivity() {
         binding = ActivityLevelBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val userName = intent.getStringExtra(UserVariables.USER_NAME)
+        binding.pName.text = userName
+
         binding.backarrow.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))
         }

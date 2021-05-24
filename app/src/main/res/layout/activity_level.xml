@@ -19,12 +19,35 @@
         />
 
     <TextView
+        android:id="@+id/welcomeText"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Welcome,"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="0dp"/>
+
+    <TextView
+        android:id="@+id/pName"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="5dp"/>
+
+    <TextView
         android:id="@+id/levelText"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Now, \nchoose your level."
-        android:textSize="40sp"
+        android:text="Now, choose your level."
+        android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="@color/white"
