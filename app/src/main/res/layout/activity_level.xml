@@ -9,7 +9,7 @@
     tools:context=".Level">
 
     <ImageView
-        android:id="@+id/backarrow"
+        android:id="@+id/backArrow"
         android:layout_width="50dp"
         android:layout_height="60dp"
         android:layout_marginLeft="10dp"

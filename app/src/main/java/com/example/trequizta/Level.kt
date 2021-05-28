@@ -18,7 +18,7 @@ class Level : AppCompatActivity() {
         val userName = intent.getStringExtra(UserVariables.USER_NAME)
         binding.pName.text = userName
 
-        binding.backarrow.setOnClickListener{
+        binding.backArrow.setOnClickListener{
             startActivity(Intent(this, MainActivity::class.java))
         }
 

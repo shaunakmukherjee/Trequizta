@@ -1,9 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".QuestionActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+        <variable
+            name="questionBody"
+            type="String" />
+        <variable
+            name="option1"
+            type="String" />
+        <variable
+            name="option2"
+            type="String" />
+        <variable
+            name="option3"
+            type="String" />
+        <variable
+            name="option4"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_color"
+        tools:context=".QuestionActivity">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:src="@drawable/back_arrow"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ProgressBar
+                android:id="@+id/questionBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:indeterminate="false"
+                android:max="6"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="@{questionBody}"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="5dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop = "20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/option_background"
+            android:gravity="center"
+            android:text="@{option1}"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop = "20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/option_background"
+            android:gravity="center"
+             android:text="@{option2}"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop = "20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/option_background"
+            android:gravity="center"
+            android:text="@{option3}"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop = "20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/option_background"
+            android:gravity="center"
+            android:text="@{option4}"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        
+    </LinearLayout>
+</layout>
