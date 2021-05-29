@@ -4,7 +4,7 @@
 
     <stroke
         android:width="5dp"
-        android:color="@color/white"/>
+        android:color="@color/black"/>
 
     <gradient
         android:type="linear"
@@ -12,5 +12,5 @@
         android:startColor="@color/white"
         android:endColor="@color/bg_2" />
 
-    <corners android:radius="20dp" />
+    <corners android:radius="40dp" />
 </shape>

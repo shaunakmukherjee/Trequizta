@@ -15,8 +15,8 @@
     </style>
 
     <style name="NoActionBarTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/bg_1</item>
-        <item name="colorPrimaryVariant">@color/bg_2</item>
+        <item name="colorPrimary">@color/bg_2</item>
+        <item name="colorPrimaryVariant">@color/bg_1</item>
         <item name="colorOnPrimary">@color/white</item>
     </style>
 </resources>

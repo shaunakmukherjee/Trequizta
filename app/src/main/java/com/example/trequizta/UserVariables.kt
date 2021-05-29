@@ -78,7 +78,69 @@ object UserVariables{
              rightAns = 2
          )
 
-        questionList.addAll(listOf(q1, q2, q3, q4, q5, q6))
+         val q7 = Question(
+             id = 7,
+             level = "E",
+             question = "Q3-E",
+             op1 = "A1",
+             op2 = "A2",
+             op3 = "A3",
+             op4 = "A4",
+             rightAns = 2
+         )
+         val q8 = Question(
+             id = 8,
+             level = "M",
+             question = "Q3-M",
+             op1 = "A1",
+             op2 = "A2",
+             op3 = "A3",
+             op4 = "A4",
+             rightAns = 2
+         )
+         val q9 = Question(
+             id = 9,
+             level = "H",
+             question = "Q3-H",
+             op1 = "A1",
+             op2 = "A2",
+             op3 = "A3",
+             op4 = "A4",
+             rightAns = 2
+         )
+         val q10 = Question(
+             id = 10,
+             level = "E",
+             question = "Q4-E",
+             op1 = "A1",
+             op2 = "A2",
+             op3 = "A3",
+             op4 = "A4",
+             rightAns = 2
+         )
+         val q11 = Question(
+             id = 11,
+             level = "M",
+             question = "Q4-M",
+             op1 = "A1",
+             op2 = "A2",
+             op3 = "A3",
+             op4 = "A4",
+             rightAns = 2
+         )
+         val q12 = Question(
+             id = 12,
+             level = "H",
+             question = "Q4-H",
+             op1 = "A1",
+             op2 = "A2",
+             op3 = "A3",
+             op4 = "A4",
+             rightAns = 2
+         )
+
+
+        questionList.addAll(listOf(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12))
 
         val userQuestionList = questionList.filter { it.level == userLevel }
 

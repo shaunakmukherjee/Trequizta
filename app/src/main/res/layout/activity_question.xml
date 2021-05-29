@@ -19,6 +19,10 @@
         <variable
             name="option4"
             type="String" />
+        <variable
+            name="buttonConfirm"
+            type="String" />
+
     </data>
 
     <LinearLayout
@@ -35,6 +39,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:padding="5dp"
+            android:contentDescription="Goes back to level screen"
             android:src="@drawable/back_arrow"
             />
         <LinearLayout
@@ -52,14 +57,17 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
+                android:progress="1"
+                android:progressTint="@color/bg_1"
+                android:progressBackgroundTint="@color/bg_2"
                 style="@android:style/Widget.ProgressBar.Horizontal"
                 android:indeterminate="false"
-                android:max="6"
+                android:max="4"
                 />
         </LinearLayout>
         <TextView
-            android:id="@+id/welcomeText"
-            android:layout_marginTop="40dp"
+            android:id="@+id/questionText"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25sp"
@@ -71,61 +79,84 @@
 
 
         <TextView
+            android:id="@+id/optionOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop = "20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="60dp"
-            android:background="@drawable/option_background"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop = "10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="80dp"
             android:gravity="center"
+            android:background="@drawable/option_background"
             android:text="@{option1}"
-            android:padding="15dp"
+            android:padding="17dp"
             android:textSize="20sp"
             android:textColor="@color/white"
             />
          <TextView
+             android:id="@+id/optionTwo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop = "20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop = "10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="80dp"
             android:background="@drawable/option_background"
             android:gravity="center"
              android:text="@{option2}"
-            android:padding="15dp"
+            android:padding="17dp"
             android:textSize="20sp"
             android:textColor="@color/white"
             />
         <TextView
+            android:id="@+id/optionThree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop = "20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop = "10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="80dp"
             android:background="@drawable/option_background"
             android:gravity="center"
             android:text="@{option3}"
-            android:padding="15dp"
+            android:padding="17dp"
             android:textSize="20sp"
             android:textColor="@color/white"
             />
         <TextView
+            android:id="@+id/optionFour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop = "20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop = "10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="80dp"
             android:background="@drawable/option_background"
             android:gravity="center"
             android:text="@{option4}"
-            android:padding="15dp"
+            android:padding="17dp"
             android:textSize="20sp"
             android:textColor="@color/white"
             />
-        
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop = "10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="80dp"
+            android:backgroundTint="@color/bg_2"
+            android:gravity="center"
+            android:text="@{buttonConfirm}"
+            android:padding="17dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:cornerRadius="40dp"
+            />
+
+
+
     </LinearLayout>
 </layout>

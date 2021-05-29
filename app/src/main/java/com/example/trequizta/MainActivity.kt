@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
             //putting validation checks before starting the game
             if (binding.playerName.text.toString().isEmpty()) {
-                Toast.makeText(this, "Can't play anonymously :)", Toast.LENGTH_SHORT)
+                Toast.makeText(this, "Can't play anonymously :)", Toast.LENGTH_SHORT).show()
             }
             else {
                 val intent = Intent(this, Level::class.java)
