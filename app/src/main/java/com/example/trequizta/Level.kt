@@ -25,16 +25,19 @@ class Level : AppCompatActivity() {
         binding.btnEasy.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
             intent.putExtra(UserVariables.DIFF_LEVEL, "E")
+            intent.putExtra(UserVariables.USER_NAME, userName)
             startActivity(intent)
         }
         binding.btnMedium.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
             intent.putExtra(UserVariables.DIFF_LEVEL, "M")
+            intent.putExtra(UserVariables.USER_NAME, userName)
             startActivity(intent)
         }
         binding.btnHard.setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)
             intent.putExtra(UserVariables.DIFF_LEVEL, "H")
+            intent.putExtra(UserVariables.USER_NAME, userName)
             startActivity(intent)
         }
     }

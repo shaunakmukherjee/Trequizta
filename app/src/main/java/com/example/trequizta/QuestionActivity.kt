@@ -19,10 +19,12 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
      * will be overwritten. Similarly, myQuestionList is also initially null.
      *
      */
+    private lateinit var binding: ActivityQuestionBinding
     private var myCurrentQuestion: Int = 1
     private var myQuestionList: List<Question>? = null
     private var userSelectedOption : Int = 0
-    private lateinit var binding: ActivityQuestionBinding
+    private var noOfRightAnswers: Int = 0
+    private var myUserName: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +38,8 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
         binding.backArrow.setOnClickListener{
             startActivity(Intent(this, Level::class.java))
         }
+
+        myUserName = intent.getStringExtra(UserVariables.USER_NAME)
 
         myQuestionList = UserVariables.getQuestions(userDiffLevel.toString())
 
@@ -149,26 +153,29 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
                             setEachQuestion()
                         }
                         else -> {
-                            Toast.makeText(this, "You've completed the Quiz!", Toast.LENGTH_SHORT)
-                                .show()
+                            //this is where we need to add Intent for ResultActivity
+                            val intent = Intent(this, ResultActivity::class.java)
+                            intent.putExtra(UserVariables.USER_NAME, myUserName)
+                            intent.putExtra(UserVariables.RIGHT_ANSWERS, noOfRightAnswers)
+                            intent.putExtra(UserVariables.QUESTION_SIZE, myQuestionList!!.size)
+                            startActivity(intent)
                         }
                     }
                 }
                 else {
                     val question = myQuestionList?.get(myCurrentQuestion-1)
-                    Log.i("This question:", "${question!!.question}")
+                    Log.i("This question:", question!!.question)
 
-                    if(question!!.rightAns != userSelectedOption)
+                    if(question.rightAns != userSelectedOption)
                         answerHandler(userSelectedOption, R.drawable.wrongoption_background)
+                    else
+                        noOfRightAnswers++
 
                     answerHandler(question.rightAns, R.drawable.correctoption_background)
                     //this displays the correct answer regardless of what the user has selected
 
 
-                    /*
-                    This is where the change needs to be done. In last question it shows 'finish' and escapes.
-                    It needs to show 'submit' first and then 'finish' after the right answer is displayed.
-                     */
+                    //if it's the last question, it will show the 'finish' button
                     if(myCurrentQuestion == myQuestionList!!.size)
                         binding.buttonConfirm = "FINISH"
                     else

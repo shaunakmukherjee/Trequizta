@@ -6,8 +6,12 @@ import android.util.Log
 * Particular user constant variables which will be used to display continuing data.
 * */
 object UserVariables{
+
+    //the following variables are declared for usage in Intent, .i.e. binding data between screens
     const val USER_NAME: String = "user_name"
-     const val DIFF_LEVEL: String = "diff_level"
+    const val DIFF_LEVEL: String = "diff_level"
+    const val RIGHT_ANSWERS: String = "no_of_right_answers"
+    const val QUESTION_SIZE: String = "question_size"
 
      fun getQuestions(userLevel: String): List <Question> {
 
