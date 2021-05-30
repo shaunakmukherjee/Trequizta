@@ -71,6 +71,8 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
         binding.questionBar.progress = myCurrentQuestion
 
+        binding.questionBar.max = myQuestionList!!.size
+
         binding.questionBody = question.question
 
         binding.option1 = question.op1
@@ -103,7 +105,7 @@ class QuestionActivity : AppCompatActivity(), View.OnClickListener {
 
         userSelectedOption = selectedPosition
 
-        v.setTextColor(Color.parseColor("#363A43"))
+        v.setTextColor(Color.parseColor("#FFFFFF"))
         v.setTypeface(v.typeface, Typeface.BOLD_ITALIC)
         v.background = ContextCompat.getDrawable(this, R.drawable.selectedoption_background)
 

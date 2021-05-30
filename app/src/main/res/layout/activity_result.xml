@@ -34,19 +34,9 @@
             android:textSize="40sp"
             android:textColor="@color/white"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="YOUR RESULTS"
+            android:text="@{username + `'s RESULTS`}"
             />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="15dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="@{username + `,`}"
-            android:textSize="25sp"
-            android:textColor="@color/white"
-            />
 
         <ImageView
             android:id="@+id/celebrationsPic"
@@ -56,13 +46,14 @@
             android:layout_marginTop="40dp"
             android:contentDescription="celebrations_image"
             />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:layout_marginBottom="50dp"
-            android:fontFamily="serif-monospace"
-            android:textSize="40sp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="35sp"
             android:gravity="center"
             android:textColor="@color/white"
             android:text="@{`Your score is ` + score +  ` out of ` + size}"
